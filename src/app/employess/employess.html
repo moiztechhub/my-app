@@ -1,0 +1,20 @@
+   <h2>Employees</h2>
+
+    <form [formGroup]="form" (ngSubmit)="add()">
+      <input placeholder="Name" formControlName="name" />
+      <input placeholder="Position" formControlName="position" />
+      <button *ngIf="!editingId">Add</button>
+    <button *ngIf="editingId" type="button" (click)="update()">Update</button>
+
+    </form>
+
+    <ul>
+      <li *ngFor="let e of employees">
+        {{ e.name }} - {{ e.position }}
+        <button (click)="remove(e.id)">Delete</button>
+        <button (click)="edit(e)">Edit</button>
+      </li>
+    </ul>
+
+
+   
