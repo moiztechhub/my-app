@@ -13,7 +13,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 export class Employees implements OnInit {
 
-  api = 'https://example.com/api/employees';
+  api = 'http://localhost:5028/api/Employees';
 
   employees: any[] = [];
 
